@@ -72,7 +72,7 @@
 </nav>
 
 
-<div>
+<div id="mid-bar">
 
     <div class="jumbotron" id="secondBar">
         <h1 class="display-4" id="mainHead">My Awesome App!</h1>
@@ -95,6 +95,48 @@
 
 </div>
 
+<div id="content-bar">
+
+    <div class="jumbotron jumbotron-fluid" >
+        <div class="container" id="jumb-pad">
+            <h1 class="display-4">Why this App is awesome</h1>
+            <p class="lead">Summary, once again,of your app's awesomeness.</p>
+        </div>
+    
+
+
+      <div id="cards" >
+                  <div class="card" style="width: 18rem;">
+            <img src="card.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="card.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="card.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p  class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+            </div>
+        </div>
+        </div>
+
+    </div>    
+</div>
+
+
+
+
+
+
 <style>
     .user
     {
@@ -114,6 +156,7 @@
      background-image: url("bck.jpg");
      background-size: cover;
      text-align: center;
+     margin-bottom: 0%;
     }
     #mailingBar
     {
@@ -126,6 +169,29 @@
     {
         margin-left: 10px;
     }
+    #content-bar
+    {
+        text-align: center;
+        
+        
+    }
+    #jumb-pad
+    {
+        padding-bottom: 80px;
+    }
+    
+    #cards
+    {
+       
+    display: inline-flex;
+    
+    }
+    .card
+    {
+        margin: 0% 5px;
+        
+    }
+    
     
 </style>
 

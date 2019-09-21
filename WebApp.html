@@ -14,11 +14,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
         
     <title>My web App</title>
 </head>
-<body>
+<body data-spy="scroll" data-target="#topBar" data-offset="10">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -35,22 +36,22 @@
 
 
         
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="topBar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top" id="topBar">
     <a class="navbar-brand" href="#">My App</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        <ul class="navbar-nav  nav nav-pills ">
+            <li class="nav-item ">
+                <a class="nav-link active" href="#secondBar">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#mid-bar">Content</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Download The App</a>
+                <a class="nav-link" href="#Download">Download The App</a>
             </li>
              
         </ul>
@@ -65,23 +66,37 @@
             <input type="password" class="form-control" placeholder="password" aria-label="Password"
                 aria-describedby="basic-addon1" id="spacing-login-bar">
     
-            <button type="button" class="btn btn-primary" ">Login</button>
+            <button type="button" class="btn btn-primary" >Login</button>
         </div>
     </div>
       
 </nav>
 
 
-<div id="mid-bar">
 
-    <div class="jumbotron" id="secondBar">
+
+
+
+<div data-spy="scroll" data-target="#navbar-example2" data-offset="0"> 
+
+
+
+
+
+
+
+
+
+<div id="mid-bar" >
+
+    <div class="jumbotron" id="secondBar" >
         <h1 class="display-4" id="mainHead">My Awesome App!</h1>
         <p class="lead">This is why you should donwload this fantastic App!</p>
         <hr class="my-4">
         <p>Want to know more ? Join our mailing list.</p>
     
         <div id="mailingBar">
-                    <div class="input-group mb-3" >
+                    <div class="input-group mb-3"  >
                        <div class="input-group-prepend">
                           <span class="input-group-text" id="basic-addon1">@</span>
                         </div>
@@ -95,11 +110,11 @@
 
 </div>
 
-<div id="content-bar">
+<div id="content-bar" >
 
-    <div class="jumbotron jumbotron-fluid" >
+    <div class="jumbotron jumbotron-fluid" id="pad" >
         <div class="container" id="jumb-pad">
-            <h1 class="display-4">Why this App is awesome</h1>
+            <h1 class="display-4" >Why this App is awesome</h1>
             <p class="lead">Summary, once again,of your app's awesomeness.</p>
         </div>
     
@@ -109,13 +124,16 @@
                   <div class="card" style="width: 18rem;">
             <img src="card.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+           <i class="fa fa-car"> <h4>Card Title</h4></i>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                 content.</p>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
             <img src="card.jpg" class="card-img-top" alt="...">
             <div class="card-body">
+               <i class="fa fa-car"><h4>Card Title</h4></i>
+
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                     content.</p>
             </div>
@@ -123,6 +141,9 @@
         <div class="card" style="width: 18rem;">
             <img src="card.jpg" class="card-img-top" alt="...">
             <div class="card-body">
+            <i class="fa fa-car "><h4>Card Title</h4></i>
+           
+
                 <p  class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                     content.</p>
             </div>
@@ -132,8 +153,16 @@
     </div>    
 </div>
 
+    <div class="jumbotron jumbotron-fluid end"  id="Download">
+        <div class="container">
+            <h1 class="display-4">Download Our App today!</h1>
+            <p class="lead">Really why i should download this app ?</p>
+            <img src="image.png" alt="" id="down">
+        </div>
+    </div>
 
 
+</div>
 
 
 
@@ -146,6 +175,9 @@
     #topBar
     {
         height: 50px;
+        position: sticky;
+        overflow: hidden;
+        top: 0%;
     }
     #spacing-login-bar
     {
@@ -172,7 +204,14 @@
     #content-bar
     {
         text-align: center;
+        margin-bottom:0%; 
         
+        
+    }
+    #pad
+    {
+        margin-top: 0%;
+        margin-bottom: 0%; 
         
     }
     #jumb-pad
@@ -185,13 +224,32 @@
        
     display: inline-flex;
     
+    
     }
     .card
     {
         margin: 0% 5px;
         
     }
-    
+    #icon
+    {
+     text-align:left;
+     margin: 0% 0%;
+    }
+    .end
+    {
+        text-align: center;
+        background-color: aqua;
+        margin-bottom: auto;
+    }
+    #down
+    {
+        width: 250px;    
+    }
+    body
+    {
+        position: relative;
+    }
     
 </style>
 
